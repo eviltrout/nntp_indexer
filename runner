@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+# Run as:
+#   nohup ./runner &
+
+until ./nntp_indexer.rb; do
+    echo "Server 'nntp_indexer.rb' crashed with exit code $?.  Respawning.." >&2
+    sleep 1
+done

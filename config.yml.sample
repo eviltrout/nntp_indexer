@@ -1,0 +1,22 @@
+# How many connections to the NNTP server
+max_nntp_connections: 5
+
+# The size of the range of articles we'll ask from the NTTP server in one go
+page_size: 2000
+
+# We don't want to update the same newsgroup at the same time so we'll lock it. This is how long it will wait before ignoring the lock.
+lock_timeout_mins: 2
+
+# Database to store local data
+database:
+  database: nntp_indexer
+  host: localhost
+  max_connections: 5
+
+# NNTP credentials
+nntp_server:
+  host: <YOUR HOST>
+  username: <YOUR USERNAME>
+  password: <YOUR PASSWORD>
+  port: 119
+  ssl: false  
